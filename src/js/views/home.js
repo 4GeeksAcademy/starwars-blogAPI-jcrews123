@@ -1,4 +1,4 @@
-import React, { useContext, useState, } from "react";
+import React, { useContext, useEffect, useState, } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { PeopleCard, PlanetCard, SpeciesCard } from "../component/BoostrapCard";
@@ -20,7 +20,6 @@ export const Home = () => {
 	))
 	return (
 		<div>
-			<button onClick={actions.getPeople}>get people</button>
 			<button onClick={actions.getPlanets}>get Planets</button>
 			<button onClick={actions.getSpecies}>get Species</button>
 			<br />

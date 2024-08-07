@@ -23,7 +23,9 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/moreinfo/:id" element={<MoreInfoPage />} />
+						<Route path="people/moreinfo/:id" element={<MoreInfoPage category="people"/>} />
+						<Route path="planets/moreinfo/:id" element={<MoreInfoPage category="planets"/>} />
+						<Route path="species/moreinfo/:id" element={<MoreInfoPage category="species"/>} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />

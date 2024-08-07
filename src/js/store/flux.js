@@ -129,11 +129,38 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			Information: new Information(),
+			ExtraData: [],
+			Favorites: [],
 			dummy: 0,
 
 		},
 		actions: {
-
+			learnMoreData: async(data) =>{
+				try{
+					setStore({ExtraData: data})
+				} catch (error) {
+					console.error("Error")
+				}
+			},
+			addFavorites: async(data) =>{
+				try {
+					const store = getStore()
+					store.Favorites.push(data)
+					setStore(store)
+				} catch (error) {
+					console.error("Error")
+				}
+			},
+			deleteFavorites: async(data) => {
+				try {
+					const store = getStore()
+					const updatedList = 
+					store.Favorites.filter((t, currentIndex) => data !== currentIndex)
+					setStore({Favorites: updatedList})
+				} catch (error) {
+					
+				}
+			},
 			getPeople: async () => {
 				try {
 					const resp = await fetch("https://www.swapi.tech/api/people?page=1&limit=5", { //82
