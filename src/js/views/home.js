@@ -20,12 +20,6 @@ export const Home = () => {
 	))
 	return (
 		<div>
-			<button onClick={actions.getPlanets}>get Planets</button>
-			<button onClick={actions.getSpecies}>get Species</button>
-			<br />
-			<button onClick={() => navigate("/moreinfo")}>get People Info</button>
-			<button onClick={actions.getPlanetsInformation}>get Planets Info</button>
-			<button onClick={actions.getSpeciesInformation}>get Species Info</button>
 			<div className="mt-5">
 				<h1>Characters</h1>
 				<div class="scrollmenu d-flex">

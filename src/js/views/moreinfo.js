@@ -16,16 +16,41 @@ export const MoreInfoPage = (props) => {
 		<div>
 			{props.category == "people" ?
 				(
-				<h1>This is a person. {extraData.name}</h1>
-			) : 
-				props.category == "planets" ? 
-				(<h1>this is a planet. {extraData.name}</h1>
-
+					<div>
+						<h1>This page is for {extraData.name}</h1>
+						<p>Name: {extraData.name}</p>
+						<p>Birth Year: {extraData.birth_year}</p>
+						<p>Gender: {extraData.gender}</p>
+						<p>Height: {extraData.height}</p>
+						<p>Skin Color: {extraData.skin_color}</p>
+						<p>Eye Color: {extraData.eye_color}</p>
+					</div>
 				) :
-				props.category == "species" ? (
-				<h1>this is a species. {extraData.name}</h1>
-			):
-				"loading..."}
+				props.category == "planets" ?
+					(
+						<div>
+							<h1>This page is for {extraData.name}</h1>
+							<p>Name: {extraData.name}</p>
+							<p>Climate: {extraData.climate}</p>
+							<p>Population: {extraData.population}</p>
+							<p>Orbital Period: {extraData.orbital_period}</p>
+							<p>Rotation Period: {extraData.rodation_period}</p>
+							<p>Diameter: {extraData.diameter}</p>
+						</div>
+					) :
+					props.category == "species" ?
+						(
+							<div>
+								<h1>This page is for {extraData.name}</h1>
+								<p>Name: {extraData.name}</p>
+								<p>Classification: {extraData.classification}</p>
+								<p>Average Height: {extraData.average_height}</p>
+								<p>Average Lifespan: {extraData.average_lifespan}</p>
+								<p>Language: {extraData.language}</p>
+								<p>Homeworld: {extraData.homeworld}</p>
+							</div>
+						) :
+						"loading..."}
 			{/* <h1>{person.name}</h1>
 			<p>Height: {person.height}</p>
 			<p>Mass: {person.mass}</p>

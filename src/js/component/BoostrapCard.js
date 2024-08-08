@@ -15,9 +15,10 @@ export const PeopleCard = (props) => {
         <p className="card-text">Gender: {props.extraPersonInfo.gender}</p>
         <p className="card-text">Hair Color: {props.extraPersonInfo.hair_color}</p>
         <p className="card-text">Eye-Color: {props.extraPersonInfo.eye_color}</p>
-        <a href="#" className="btn btn-primary" onClick={() => {navigate("/people/moreinfo/" + `${props.extraPersonInfo.uid}`)
-      actions.learnMoreData(props.extraPersonInfo)
-      }}>Learn more!</a>
+        <a href="#" className="btn btn-primary" onClick={() => {
+          navigate("/people/moreinfo/" + `${props.extraPersonInfo.uid}`)
+          actions.learnMoreData(props.extraPersonInfo)
+        }}>Learn more!</a>
         <a href="#" className="btn btn-primary" onClick={() => actions.addFavorites(props.extraPersonInfo)}>heart</a>
       </div>
     </div>
@@ -36,7 +37,7 @@ export const PlanetCard = (props) => {
         <a href="#" className="btn btn-primary" onClick={() => {
           navigate("/planets/moreinfo/" + `${props.extraPlanetInfo.uid}`)
           actions.learnMoreData(props.extraPlanetInfo)
-          }}>Learn more!</a>
+        }}>Learn more!</a>
         <a href="#" className="btn btn-primary">heart</a>
       </div>
     </div>
@@ -57,7 +58,7 @@ export const SpeciesCard = (props) => {
           navigate("/species/moreinfo/" + `${props.extraSpeciesInfo.uid}`)
           actions.learnMoreData(props.extraSpeciesInfo)
         }
-      }>Learn more!</a>
+        }>Learn more!</a>
         <a href="#" className="btn btn-primary">heart</a>
       </div>
     </div>
